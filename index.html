@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -13,7 +12,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -23,8 +22,8 @@
         <nav class="navbar">
 
             <div class="logo">
-                <img src="{% static 'images/SHR.jpg' %}" alt="SHR Filografi Logo">
-                <span></span>
+                <img src="images/SHR.jpg" alt="SHR Filografi Logo">
+                <span>SHR Filografi</span>
             </div>
 
             <ul class="menu" id="menu">
@@ -47,29 +46,27 @@
         </nav>
     </header>
 
-    <!-- ============ HERO (İKONLU) ============ -->
+    <!-- ============ HERO ============ -->
     <section class="hero" id="anasayfa">
 
         <div class="hero-left">
 
-            <!-- SHR LOGO -->
             <div class="hero-logo">
-                <img src="{% static 'images/hero.jpg' %}" alt="SHR Filografi">
+                <img src="images/SHR.jpg" alt="SHR Filografi">
             </div>
 
-            <!-- İKONLAR (Sol ve Sağ) -->
             <div class="hero-icons">
 
                 <div class="hero-icons-left">
-                    <i class="fas fa-hammer"></i>          <!-- Çekiç -->
-                    <i class="fas fa-tools"></i>           <!-- Alet -->
+                    <i class="fas fa-hammer"></i>
+                    <i class="fas fa-tools"></i>
                 </div>
 
                 <h1 class="anim-fade-up">SHR Filografi</h1>
 
                 <div class="hero-icons-right">
-                    <i class="fas fa-circle"></i>          <!-- Çivi -->
-                    <i class="fas fa-thread"></i>          <!-- Makara/İp -->
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-thread"></i>
                 </div>
 
             </div>
@@ -202,31 +199,31 @@
         <div class="product-container">
 
             <div class="card" data-category="logo">
-                <img src="{% static 'images/logo.jpg' %}" alt="Takım Logoları">
+                <img src="images/logo.jpg" alt="Takım Logoları">
                 <h3>Takım Logoları</h3>
                 <p>İsteğe Göre Takım Logoları.</p>
             </div>
 
             <div class="card" data-category="flower">
-                <img src="{% static 'images/gul.jpg' %}" alt="Gül Filografi">
+                <img src="images/gul.jpg" alt="Gül Filografi">
                 <h3>Gül Filografi</h3>
                 <p>El emeği özel tasarım.</p>
             </div>
 
             <div class="card" data-category="calligraphy">
-                <img src="{% static 'images/hat.jpg' %}" alt="Hat Sanatı">
+                <img src="images/hat.jpg" alt="Hat Sanatı">
                 <h3>Hat Sanatı</h3>
                 <p>Kişiye özel hazırlanır.</p>
             </div>
 
             <div class="card" data-category="flower">
-                <img src="{% static 'images/cicek.jpg' %}" alt="Çiçek Filografi">
+                <img src="images/cicek.jpg" alt="Çiçek Filografi">
                 <h3>Çiçek Filografi</h3>
                 <p>Modern dekorasyon.</p>
             </div>
 
             <div class="card" data-category="animal">
-                <img src="{% static 'images/kurt.jpg' %}" alt="Kurt Figürü">
+                <img src="images/kurt.jpg" alt="Kurt Figürü">
                 <h3>Kurt Figürü</h3>
                 <p>Özel koleksiyon.</p>
             </div>
@@ -406,7 +403,7 @@
 
     </footer>
 
-    <script src="{% static 'js/script.js' %}"></script>
+    <script src="script.js"></script>
 
 </body>
 
