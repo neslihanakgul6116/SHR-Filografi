@@ -1,3 +1,4 @@
+
 /* ============ GENEL ============ */
 
 * {
@@ -1037,9 +1038,10 @@ footer {
         z-index: 1001;
     }
 
+    /* 👇 MOBİL NAVBAR RESMİ KAPATMASIN DİYE PADDING DEĞERİNİ 100px -> 160px YAPTIK 👇 */
     .hero {
         min-height: 70vh;
-        padding: 140px 5% 60px;
+        padding: 160px 5% 60px;
     }
 
     .hero-icons {
@@ -1152,9 +1154,10 @@ footer {
 
 @media (max-width: 576px) {
 
+    /* 👇 MOBİLDE RESMİN ÜST KAFASI NAVBAR ALTINDA SIKIŞMASIN DİYE PADDING DEĞERİNİ 80px -> 140px YAPTIK 👇 */
     .hero {
         min-height: 60vh;
-        padding: 80px 5% 40px;
+        padding: 140px 5% 40px;
     }
 
     .hero-icons {
@@ -1291,6 +1294,7 @@ footer {
     transition:.3s;
 }
 
+/* 👇 Yarım kalan hover parantezini burada tamamladık kanka 👇 */
 .buy-btn:hover{
     background:#1ca851;
     transform:translateY(-3px);
