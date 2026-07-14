@@ -1028,7 +1028,8 @@ footer {
     }
 
     .menu.active {
-        left: 0;
+        left: 0 !important;
+        display: flex !important; /* Menünün mobilde görünür olmasını sağlar */
     }
 
     .hamburger {
