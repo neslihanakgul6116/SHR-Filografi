@@ -179,12 +179,12 @@ a {
 }
 
 .hero-logo img {
-    width: 280px;        
-    height: 180px;       
+    width: 480px;        /* Yatay genişliği 480px yaptık */
+    height: 180px;       /* Genişliğe uyumlu, basık durmayan bir yükseklik verdik */
     border-radius: 12px;
-    object-fit: cover;
+    object-fit: cover;   /* Görselin sünmeden, kutunun içine tam oturmasını sağlar */
     border: 4px solid #ffd54f;
-    box-shadow: 0 0 50px rgba(255, 213, 79, 0.2);
+    box-shadow: 0 0 50px rgba(255, 213, 79, 0.3); /* Büyük görsel için gölgeyi de biraz belirginleştirdik */
     transition: transform 0.5s ease;
 }
 
