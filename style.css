@@ -1294,8 +1294,21 @@ footer {
     transition:.3s;
 }
 
-/* 👇 Yarım kalan hover parantezini burada tamamladık kanka 👇 */
+
 .buy-btn:hover{
     background:#1ca851;
     transform:translateY(-3px);
+}
+/* Ürün Ölçü Bilgisi Stili */
+.product-size {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.product-size i {
+    color: #5f2c82;
+    margin-right: 5px;
 }
