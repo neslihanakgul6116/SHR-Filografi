@@ -1,261 +1,598 @@
-/* ============ GENEL ============ */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="tr">
 
-html {
-    scroll-behavior: smooth;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akgül Filografi | Sanatı Çivilerle Buluşturuyoruz</title>
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #12002f;
-    color: #fff;
-    overflow-x: hidden;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-h1, h2, h3, h4 {
-    font-family: 'Playfair Display', serif;
-}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-a {
-    text-decoration: none;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-.section-subtitle {
-    text-align: center;
-    font-size: 18px;
-    opacity: 0.7;
-    margin-bottom: 50px;
-}
+<body>
 
-/* ============ NAVBAR ============ */
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 18px 60px;
-    background: rgba(18, 0, 47, 0.92);
-    backdrop-filter: blur(18px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 213, 79, 0.1);
-}
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="akgul.png" alt="Akgül Logo">
+                <span>Akgül Filografi</span>
+            </div>
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
+            <ul class="menu" id="menu">
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#mesaj">İlham</a></li>
+                <li><a href="#urunler">Ürünler</a></li>
+                <li><a href="#hikaye">Hikaye</a></li>
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="#nedenbiz">Neden Biz?</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
 
-.logo img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ffd54f;
-}
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-.logo span {
-    font-size: 26px;
-    font-weight: 700;
-    background: linear-gradient(45deg, #ffd54f, #ffb300);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    <section class="hero" id="anasayfa">
+        <div class="hero-left">
+            <div class="hero-logo">
+                <img src="kurs.png" alt="Akgül Filografi">
+            </div>
+            <div class="hero-icons">
+                <div class="hero-icons-left">
+                    <i class="fas fa-hammer"></i>
+                    <i class="fas fa-circle-notch"></i>
+                </div>
 
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-}
+                <h1 class="anim-fade-up">Akgül Filografi</h1>
 
-.menu a {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
-}
+                <div class="hero-icons-right">
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-lines-leaning"></i>
+                </div>
+            </div>
 
-.menu a:hover {
-    color: #ffd54f;
-}
+            <h2 class="anim-fade-up delay-1">Sanatı Çivilerle Buluşturuyoruz</h2>
 
-.hamburger {
-    display: none;
-}
+            <p class="anim-fade-up delay-2">
+                El emeği filografi tabloları, kişiye özel tasarımlar ve sevgiyle hazırlanan eserler.
+            </p>
 
-/* ============ HERO ============ */
-.hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 8% 80px;
-    background: linear-gradient(135deg, #1c0038 30%, #5c1fa6 100%);
-    text-align: center;
-}
+            <a href="#urunler" class="btn anim-fade-up delay-3">
+                <i class="fas fa-arrow-right"></i> Ürünleri Keşfet
+            </a>
+        </div>
+    </section>
 
-.hero-logo img {
-    width: 100%;
-    max-width: 480px;
-    height: auto;
-    border-radius: 12px;
-    border: 4px solid #ffd54f;
-}
+    <section class="message-section" id="mesaj">
+        <div class="message-container">
+            <div class="message-icon">
+                <i class="fas fa-wand-magic-sparkles"></i>
+            </div>
 
-/* ============ ÜRÜNLER ============ */
+            <h2>Bu Sadece Bir Filografi Sitesi Değil</h2>
 
-.products {
-    padding: 80px 5%;
-    background: #f7f3ff;
-    color: #333;
-}
+            <p class="message-sub">
+                Bir <strong>başlangıç hikâyesi</strong>, bir <strong>ilham kaynağı</strong>.
+            </p>
 
-.products h2 {
-    text-align: center;
-    font-size: 42px;
-    color: #5f2c82;
-    margin-bottom: 40px;
-}
+            <div class="message-content">
+                <p>
+                    <strong>Seher AKGÜL,</strong> ev hanımıyken kendi potansiyelini keşfetti. 
+                    Önce <strong>filografi</strong> ile sanatı, sonra <strong>web tasarım</strong> ile dijital dünyayı öğrendi.
+                    Bugün, kendi markasını kurmuş, üreten ve ilham veren bir kadın.
+                </p>
 
-.filter-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
+                <p>
+                    Bu site, sadece el emeği tabloları sergilemek için değil; 
+                    <strong>"Ben de yapabilirim"</strong> diyen her kadına, her gence bir mesaj vermek için var.
+                </p>
 
-.filter-btn {
-    background: #fff;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #5f2c82;
-    cursor: pointer;
-    transition: .3s;
-    box-shadow: 0 3px 10px rgba(0,0,0,.05);
-}
+                <div class="message-quote">
+                    <i class="fas fa-quote-left"></i>
+                    <span>"Hayallerinizi ertelemeyin. Öğrenmek, başlamak ve üretmek için hiçbir zaman geç değil."</span>
+                    <i class="fas fa-quote-right"></i>
+                </div>
 
-.filter-btn:hover,
-.filter-btn.active {
-    background: #5f2c82;
-    color: #fff;
-}
+                <p class="message-signature">
+                    — <strong>Akgül Filografi </strong>
+                </p>
+            </div>
+        </div>
+    </section>
 
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 1400px;
-    margin: auto;
-}
+    <section class="products" id="urunler">
+        <h2>Öne Çıkan Ürünler</h2>
+        <p class="section-subtitle">Kategorilere göre keşfedin</p>
 
-.card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,.12);
-    transition: .35s;
-}
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tümü</button>
+            <button class="filter-btn" data-filter="flower">Çiçek</button>
+            <button class="filter-btn" data-filter="animal">Hayvan</button>
+            <button class="filter-btn" data-filter="calligraphy">Hat</button>
+            <button class="filter-btn" data-filter="logo">Logo</button>
+        </div>
 
-.card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 50px rgba(95,44,130,.18);
-}
+        <div class="product-container">
 
-.card img {
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-}
+            <div class="card" data-category="flower">
+                <img src="gul.jpg" alt="Gül Filografi">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Gül Filografi</h3>
+                <p>El emeği özel tasarım.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 80x80 cm
+                </div>
+                <div class="price">₺45.000</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Gül%20Filografi%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-.card h3 {
-    padding: 15px 15px 5px;
-    color: #5f2c82;
-    font-size: 18px;
-    text-align: center;
-}
+            <div class="card" data-category="flower">
+                <img src="cicek.jpg" alt="Çiçek Filografi">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Çiçek Filografi</h3>
+                <p>Modern dekorasyon.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 35x35 cm
+                </div>
+                <div class="price">₺30.000</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Çiçek%20Filografi%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-.rating {
-    text-align: center;
-    color: #f4b400;
-    margin: 5px 0;
-}
+            <div class="card" data-category="calligraphy">
+                <img src="allah.png" alt="Allah Lafzı Filografi">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Allah Lafzı</h3>
+                <p>Çivilerin ve tellerin muhteşem uyumuyla el emeği hat tablosu.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 40*40
+                </div>
+                <div class="price">₺5000</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Allah%20Lafzı%20filografi%20tablosu%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-.price {
-    text-align: center;
-    color: #5f2c82;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 8px 0;
-}
+            <div class="card" data-category="calligraphy">
+                <img src="muh.png" alt="Muhammed Lafzı Filografi">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Muhammed Lafzı</h3>
+                <p>Zarif detaylarla işlenmiş el emeği Muhammed yazılı hat tablosu.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 40*40
+                </div>
+                <div class="price">₺5000</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Muhammed%20Lafzı%20filografi%20tablosu%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-.buy-btn {
-    display: block;
-    width: 90%;
-    margin: 15px auto;
-    padding: 12px;
-    background: #25D366;
-    color: #fff;
-    text-align: center;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: .3s;
-}
+            <div class="card" data-category="calligraphy">
+                <img src="hu.png" alt="Allah Filografi">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Allah Tablosu</h3>
+                <p>Zarif detaylarla süslenmiş özel el yapımı tasarım.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 35*50
+                </div>
+                <div class="price">₺6000</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Hû%20filografi%20tablosu%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-.buy-btn:hover {
-    background: #1ca851;
-}
+            <div class="card" data-category="logo">
+                <img src="bayrak.jpg" alt="Türk Bayrağı">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Türk Bayrağı</h3>
+                <p>Şanlı bayrağımızın el emeği asil tasarımı.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: İstenilen boyutlarda yapılır.
+                </div>
+                <div class="price">Fiyat Sorunuz</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Türk%20Bayrağı%20Filografi%20tablosu%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-/* ============ DİĞER BÖLÜMLER ============ */
+            <div class="card" data-category="calligraphy">
+                <img src="hay (2).png" alt="Hiç Filografi">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Hiç Tablosu</h3>
+                <p>Estetik hat detaylarına sahip özel tasarım filografi çalışması.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 40*60
+                </div>
+                <div class="price">₺7000</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Hay%20filografi%20tablosu%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-.services,
-.why-us,
-.about,
-.contact {
-    padding: 80px 8%;
-}
+            <div class="card" data-category="calligraphy">
+                <img src="hat.jpg" alt="Hat Sanatı">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Hat Sanatı</h3>
+                <p>Kişiye özel hazırlanır.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 50x70 cm
+                </div>
+                <div class="price">₺9.000'den başlayan</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Hat%20Sanatı%20filografi%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-footer {
-    background: #090015;
-    padding: 60px 8% 20px;
-    text-align: center;
-}
+            <div class="card" data-category="calligraphy">
+                <img src="string.png" alt="StringArt Tablosu">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Özel Tasarım Tablo</h3>
+                <p>Modern ve estetik detaylarla işlenmiş el emeği göz nuru eserimiz.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 75*50
+                </div>
+                <div class="price">₺10000</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Özel%20Tasarım%20tablo%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-/* ============ RESPONSIVE ============ */
+            <div class="card" data-category="logo">
+                <img src="logo.jpg" alt="Takım Logoları">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Takım Logoları</h3>
+                <p>İsteğe göre takım logoları hazırlanır.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: İstenilen boyutlarda yapılır.
+                </div>
+                <div class="price">₺7.000'den başlayan</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Takım%20Logosu%20filografi%20siparişi%20vermek%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-@media (max-width: 768px) {
-    .product-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
+            <div class="card" data-category="logo">
+                <img src="bursaspor.jpg" alt="Bursaspor">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Bursaspor Logosu</h3>
+                <p>Yeşil-beyaz sevdalılarına özel tasarım.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 45x60 cm
+                </div>
+                <div class="price">₺7.000</div> 
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Bursaspor%20Filografi%20tablosu%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-    .navbar {
-        padding: 15px 20px;
-    }
+            <div class="card" data-category="animal">
+                <img src="kurt.jpg" alt="Kurt Figürü">
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <h3>Kurt Figürü</h3>
+                <p>Özel koleksiyon.</p>
+                <div class="product-size">
+                    <i class="fas fa-ruler-combined"></i> Ölçü: 50x50 cm
+                </div>
+                <div class="price">₺10.000</div>
+                <div class="shipping-info" style="font-size: 11px; color: #e74c3c; margin-bottom: 10px; font-weight: 600;"><i class="fas fa-info-circle"></i> Kargo Alıcıya Aittir</div>
+                <a href="https://wa.me/905427245861?text=Merhaba%20Kurt%20Filografi%20hakkında%20bilgi%20almak%20istiyorum." class="buy-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Sipariş Ver
+                </a>
+            </div>
 
-    .menu {
-        display: none;
-    }
+        </div>
+    </section>
 
-    .hamburger {
-        display: flex;
-    }
-}
+    <section class="brand-story" id="hikaye">
+        <div class="story-container story-centered">
+            <div class="story-right story-full">
+                <h2>Hikayemiz</h2>
+                <p>
+                    <strong>Akgül Filografi</strong>, sabrın, emeğin ve çivilerle tellerin uyumundan doğan bir sanat yolculuğudur. Bu tutku dolu yola adım atarken, alanında uzman olan ve bizlere her zaman bir öğretmenden çok daha fazlası olan değerli hocamız <strong>Elif Uzun Özay</strong>'ın rehberliği benim için en büyük ilham kaynağı oldu.
+                </p>
+                <p>
+                    Hocam Elif Uzun Özay'ın sanata olan derin sevgisi, sabrı ve bana aşıladığı estetik bakış açısı sayesinde bugün çivilerin sertliğini tellerin zarafetiyle yumuşatıyor, hayallerimi tablolara işliyorum. Atölyemizde büyük bir titizlikle ürettiğimiz her bir eser, sadece tellerden ibaret değil; hocamızdan aldığımız o değerli öğretiyi, dökülen alın terini ve bu sanata duyduğumuz sonsuz saygıyı temsil ediyor.
+                </p>
+            </div>
+        </div>
+    </section>
 
-@media (max-width: 480px) {
-    .product-container {
-        grid-template-columns: 1fr;
-    }
+    <section class="services" id="hizmetler">
+        <h2>Hizmetlerimiz</h2>
+        <p class="section-subtitle">Size özel çözümler</p>
 
-    .products h2 {
-        font-size: 30px;
-    }
-}
+        <div class="services-container">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-pencil-ruler"></i></div>
+                <h3>Özel Sipariş</h3>
+                <p>İstediğiniz fotoğraf veya deseni filografi sanatıyla ölümsüzleştiriyoruz.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-palette"></i></div>
+                <h3>Kişiye Özel Tasarım</h3>
+                <p>Size özel, eşsiz ve anlamlı tasarımlar hazırlıyoruz.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-gift"></i></div>
+                <h3>Hediye Filografi</h3>
+                <p>Sevdiklerinize unutulmaz bir hediye. Duyguları tellere işliyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us" id="nedenbiz">
+        <h2>Neden Akgül Filografi?</h2>
+        <p class="section-subtitle light">Neden bizi tercih etmelisiniz?</p>
+
+        <div class="why-container">
+            <div class="why-item">
+                <div class="why-icon"><i class="fas fa-hand-sparkles"></i></div>
+                <h3>Tamamen El Emeği</h3>
+                <p>Her eser özenle, tek tek elle işlenir.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="fas fa-star"></i></div>
+                <h3>Kaliteli Malzeme</h3>
+                <p>Paslanmaz teller and kaliteli çiviler kullanıyoruz.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>Özgün Tasarım</h3>
+                <p>Hiçbir eser bir diğerinin aynısı değil.</p>
+            </div>
+
+            <div class="why-item">
+                <div class="why-icon"><i class="fas fa-truck-fast"></i></div>
+                <h3>Hızlı Teslimat</h3>
+                <p>Siparişlerinizi en kısa sürede hazırlıyoruz.</p>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h3>Müşterilerimiz Ne Diyor?</h3>
+
+            <div class="testimonial-slider">
+                <div class="testimonial-item active">
+                    <p>"Harika bir işçilik! Siparişim beklediğimden çok daha güzel geldi. Kesinlikle tavsiye ederim."</p>
+                    <h4>- Ayşe Y.</h4>
+                </div>
+
+                <div class="testimonial-item">
+                    <p>"Sevgilime hediye aldım, çok mutlu oldu. Filografi sanatıyla tanışmak harika bir deneyimdi."</p>
+                    <h4>- Mehmet K.</h4>
+                </div>
+
+                <div class="testimonial-item">
+                    <p>"Ofisime özel takım logomuzu yaptırdık. Herkes çok beğendi. Profesyonel ve kaliteli işçilik."</p>
+                    <h4>- Zeynep T.</h4>
+                </div>
+            </div>
+
+            <div class="slider-controls">
+                <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="hakkimizda">
+        <h2>Hakkımızda</h2>
+        <p>
+            Akgül Filografi olarak tamamen el emeği, kişiye özel filografi tabloları hazırlıyoruz.
+            Her ürün özenle tasarlanır ve sevgiyle üretilir.
+        </p>
+    </section>
+
+    <section class="contact" id="iletisim">
+        <h2>İletişim</h2>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <p><i class="fab fa-instagram"></i> @akgulfilografi</p>
+                <p><i class="fab fa-whatsapp"></i> 0542 724 58 61</p>
+                <p><i class="fas fa-map-marker-alt"></i> Bursa / Türkiye</p>
+                <p><i class="fas fa-envelope"></i> info@akgulfilografi.com</p>
+
+                <a href="https://wa.me/905427245861" class="btn-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp ile Yaz
+                </a>
+            </div>
+
+            <div class="contact-instagram">
+                <h3>Instagram'da Bizi Takip Et</h3>
+                <div class="instagram-feed">
+                    <div class="insta-placeholder">
+                        <i class="fab fa-instagram"></i>
+                        <p>@akgulfilografi</p>
+                        <p>🔗 Instagram'da bizi takip edin!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="map-container">
+            <iframe 
+                src="https://maps.google.com/maps?q=Konak%20Mahallesi,%20Bedel%20Sokak%20No:6%20Daire:3,%20Nil%C3%BCfer/Bursa&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Akgül Filografi</h4>
+                <p>El emeği, kişiye özel filografi tabloları. Sanatı çivilerle buluşturuyoruz.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hızlı Linkler</h4>
+                <ul>
+                    <li><a href="#anasayfa">Ana Sayfa</a></li>
+                    <li><a href="#urunler">Ürünler</a></li>
+                    <li><a href="#hikaye">Hikaye</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Bizi Takip Edin</h4>
+                <div class="social-icons">
+                    <a href="https://instagram.com/akgulfilografi" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>E-posta Aboneliği</h4>
+                <p>Yeni ürünlerden haberdar olun.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="E-posta adresiniz">
+                    <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Akgül Filografi. Tüm hakları saklıdır.</p>
+            <p>El Emeği • Sanat • Kişiye Özel Tasarım</p>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const productCards = document.querySelectorAll(".card");
+
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Aktif olan butona "active" sınıfı ver, diğerlerinden kaldır
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                const filterValue = button.getAttribute("data-filter");
+
+                productCards.forEach(card => {
+                    const cardCategory = card.getAttribute("data-category");
+                    
+                    if (filterValue === "all" || cardCategory === filterValue) {
+                        // CSS flex veya grid yapısının bozulmaması ve kesin görünmesi için important tanımlı blok veriyoruz
+                        card.style.setProperty("display", "block", "important");
+                    } else {
+                        // CSS kurallarını ezerek kesinlikle gizlenmesi için important tanımlı none veriyoruz
+                        card.style.setProperty("display", "none", "important");
+                    }
+                });
+            });
+        });
+    });
+    </script>
+
+</body>
+</html>
