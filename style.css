@@ -1318,7 +1318,7 @@ footer {
     transform: translateY(-3px);
 }
 
-/* Ürün Ölçü Bilgisi Stili */
+/* --- Ürün Ölçü Bilgisi --- */
 .product-size {
     text-align: center;
     font-size: 14px;
@@ -1331,21 +1331,42 @@ footer {
     color: #5f2c82;
     margin-right: 5px;
 }
-/* Mobil Menü Düzeni */
+
+/* --- Hamburger Menü ve Mobil Düzen --- */
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 2px 0;
+    transition: 0.4s;
+}
+
 @media (max-width: 900px) {
+    .hamburger { display: flex; }
+    
     .menu {
         position: fixed;
         top: 70px;
-        right: -100%; /* Ekran dışında */
+        right: -100%;
         width: 100%;
         height: calc(100vh - 70px);
         background: #12002f;
+        display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         transition: 0.5s;
+        z-index: 999;
     }
+    
     .menu.active { right: 0; }
-    .hamburger { display: flex; }
 }
 
 /* Hamburger İkon Animasyonu */
