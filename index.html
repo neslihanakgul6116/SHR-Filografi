@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akgül Filografi | Sanatı Çivilerle Buluşturuyoruz</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header>
@@ -23,23 +18,47 @@
             </div>
 
             <ul class="menu" id="menu">
-                <li><a href="#anasayfa">Ana Sayfa</a></li>
-                <li><a href="#mesaj">İlham</a></li>
-                <li><a href="#urunler">Ürünler</a></li>
-                <li><a href="#hikaye">Hikaye</a></li>
-                <li><a href="#hizmetler">Hizmetler</a></li>
-                <li><a href="#nedenbiz">Neden Biz?</a></li>
-                <li><a href="#hakkimizda">Hakkımızda</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="iletisim.html">İletişim</a></li>
             </ul>
 
             <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </div>
         </nav>
     </header>
+
+    <!-- Hero
+    <!-- ... (senin içeriklerin) ... -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Hamburger Menü
+            const menuToggle = document.querySelector(".hamburger"); 
+            const menu = document.querySelector(".menu");
+            menuToggle.addEventListener("click", () => {
+                menuToggle.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+
+            // Ürün Filtreleme
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const productCards = document.querySelectorAll(".card");
+            filterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    filterButtons.forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
+                    const filterValue = button.getAttribute("data-filter");
+                    productCards.forEach(card => {
+                        const cardCategory = card.getAttribute("data-category");
+                        card.style.setProperty("display", (filterValue === "all" || cardCategory === filterValue) ? "flex" : "none", "important");
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
 
     <section class="hero" id="anasayfa">
         <div class="hero-left">
@@ -564,15 +583,27 @@
             <p>El Emeği • Sanat • Kişiye Özel Tasarım</p>
         </div>
     </footer>
+    
 
-    <script>
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
+        // 1. HAMBURGER MENÜ MANTIĞI
+        const menuToggle = document.querySelector(".hamburger"); 
+        const menu = document.querySelector(".menu");
+
+        if (menuToggle && menu) {
+            menuToggle.addEventListener("click", () => {
+                menuToggle.classList.toggle("active");
+                menu.classList.toggle("active");
+            });
+        }
+
+        // 2. ÜRÜN FİLTRELEME MANTIĞI
         const filterButtons = document.querySelectorAll(".filter-btn");
         const productCards = document.querySelectorAll(".card");
 
         filterButtons.forEach(button => {
             button.addEventListener("click", () => {
-                // Aktif olan butona "active" sınıfı ver, diğerlerinden kaldır
                 filterButtons.forEach(btn => btn.classList.remove("active"));
                 button.classList.add("active");
 
@@ -582,17 +613,15 @@
                     const cardCategory = card.getAttribute("data-category");
                     
                     if (filterValue === "all" || cardCategory === filterValue) {
-                        // CSS flex veya grid yapısının bozulmaması ve kesin görünmesi için important tanımlı blok veriyoruz
-                        card.style.setProperty("display", "block", "important");
+                        card.style.setProperty("display", "flex", "important");
                     } else {
-                        // CSS kurallarını ezerek kesinlikle gizlenmesi için important tanımlı none veriyoruz
                         card.style.setProperty("display", "none", "important");
                     }
                 });
             });
         });
     });
-    </script>
+</script>
 
 </body>
 </html>

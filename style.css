@@ -1331,3 +1331,24 @@ footer {
     color: #5f2c82;
     margin-right: 5px;
 }
+/* Mobil Menü Düzeni */
+@media (max-width: 900px) {
+    .menu {
+        position: fixed;
+        top: 70px;
+        right: -100%; /* Ekran dışında */
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: #12002f;
+        flex-direction: column;
+        justify-content: center;
+        transition: 0.5s;
+    }
+    .menu.active { right: 0; }
+    .hamburger { display: flex; }
+}
+
+/* Hamburger İkon Animasyonu */
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
