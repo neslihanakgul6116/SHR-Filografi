@@ -28,38 +28,6 @@
         </nav>
     </header>
 
-    <!-- Hero
-    <!-- ... (senin içeriklerin) ... -->
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Hamburger Menü
-            const menuToggle = document.querySelector(".hamburger"); 
-            const menu = document.querySelector(".menu");
-            menuToggle.addEventListener("click", () => {
-                menuToggle.classList.toggle("active");
-                menu.classList.toggle("active");
-            });
-
-            // Ürün Filtreleme
-            const filterButtons = document.querySelectorAll(".filter-btn");
-            const productCards = document.querySelectorAll(".card");
-            filterButtons.forEach(button => {
-                button.addEventListener("click", () => {
-                    filterButtons.forEach(btn => btn.classList.remove("active"));
-                    button.classList.add("active");
-                    const filterValue = button.getAttribute("data-filter");
-                    productCards.forEach(card => {
-                        const cardCategory = card.getAttribute("data-category");
-                        card.style.setProperty("display", (filterValue === "all" || cardCategory === filterValue) ? "flex" : "none", "important");
-                    });
-                });
-            });
-        });
-    </script>
-</body>
-</html>
-
     <section class="hero" id="anasayfa">
         <div class="hero-left">
             <div class="hero-logo">
@@ -579,49 +547,78 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2026 Akgül Filografi. Tüm hakları saklıdır.</p>
+            <p>©️ 2026 Akgül Filografi. Tüm hakları saklıdır.</p>
             <p>El Emeği • Sanat • Kişiye Özel Tasarım</p>
         </div>
     </footer>
-    
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        // 1. HAMBURGER MENÜ MANTIĞI
-        const menuToggle = document.querySelector(".hamburger"); 
-        const menu = document.querySelector(".menu");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. HAMBURGER MENÜ MANTIĞI
+            const menuToggle = document.querySelector(".hamburger");
+            const menu = document.querySelector(".menu");
 
-        if (menuToggle && menu) {
-            menuToggle.addEventListener("click", () => {
-                menuToggle.classList.toggle("active");
-                menu.classList.toggle("active");
-            });
-        }
+            if (menuToggle && menu) {
+                menuToggle.addEventListener("click", () => {
+                    menuToggle.classList.toggle("active");
+                    menu.classList.toggle("active");
+                });
 
-        // 2. ÜRÜN FİLTRELEME MANTIĞI
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        const productCards = document.querySelectorAll(".card");
+                // Menüden bir linke tıklanınca menüyü otomatik kapat (mobilde daha iyi UX)
+                menu.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", () => {
+                        menuToggle.classList.remove("active");
+                        menu.classList.remove("active");
+                    });
+                });
+            }
 
-        filterButtons.forEach(button => {
-            button.addEventListener("click", () => {
-                filterButtons.forEach(btn => btn.classList.remove("active"));
-                button.classList.add("active");
+            // 2. ÜRÜN FİLTRELEME MANTIĞI
+            const filterButtons = document.querySelectorAll(".filter-btn");
+            const productCards = document.querySelectorAll(".card");
 
-                const filterValue = button.getAttribute("data-filter");
+            filterButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    filterButtons.forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
 
-                productCards.forEach(card => {
-                    const cardCategory = card.getAttribute("data-category");
-                    
-                    if (filterValue === "all" || cardCategory === filterValue) {
-                        card.style.setProperty("display", "flex", "important");
-                    } else {
-                        card.style.setProperty("display", "none", "important");
-                    }
+                    const filterValue = button.getAttribute("data-filter");
+
+                    productCards.forEach(card => {
+                        const cardCategory = card.getAttribute("data-category");
+
+                        if (filterValue === "all" || cardCategory === filterValue) {
+                            card.style.setProperty("display", "flex", "important");
+                        } else {
+                            card.style.setProperty("display", "none", "important");
+                        }
+                    });
                 });
             });
-        });
-    });
-</script>
 
+            // 3. YORUM SLIDER MANTIĞI
+            const testimonialItems = document.querySelectorAll(".testimonial-item");
+            const prevBtn = document.querySelector(".slider-btn.prev");
+            const nextBtn = document.querySelector(".slider-btn.next");
+            let currentTestimonial = 0;
+
+            function showTestimonial(index) {
+                testimonialItems.forEach(item => item.classList.remove("active"));
+                testimonialItems[index].classList.add("active");
+            }
+
+            if (prevBtn && nextBtn && testimonialItems.length > 0) {
+                prevBtn.addEventListener("click", () => {
+                    currentTestimonial = (currentTestimonial - 1 + testimonialItems.length) % testimonialItems.length;
+                    showTestimonial(currentTestimonial);
+                });
+
+                nextBtn.addEventListener("click", () => {
+                    currentTestimonial = (currentTestimonial + 1) % testimonialItems.length;
+                    showTestimonial(currentTestimonial);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
